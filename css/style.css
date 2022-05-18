@@ -9,25 +9,24 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 .scroll-container {
     height: 100vh;
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    /* scroll-snap-type: y mandatory;
+    overflow-y: scroll; */
 }
 
 
 .one {
     background-color: red;
 }
+
 .two {
     background-color: yellow;
 }
+
 .three {
     background-color: green;
 }
-
-
