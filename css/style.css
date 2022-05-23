@@ -95,7 +95,12 @@ p, a {
 }
 
 /* BETYDNING SECTION */
-
+.betydning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .betydning p {
     margin-left: 8%;
     margin-right: 8%;
@@ -103,10 +108,28 @@ p, a {
 }
 .betydning h2 {
     font-size: 3rem;
-    display: flex;
-    justify-content: center;
+}
+.betydning img {
+    opacity: 0.5;
+    margin: 50px;
+}
+.betydning video {
+    width: 100%;
+    margin-bottom: 40px;
 }
 
+/* DETALJER SECTION */
+.details {
+    background-image: url("../img/bkgd_image_placeholder.png");
+    background-size: fit;
+    background-repeat: repeat;
+    background-size: auto; 
+}
+.details p {
+    /* position: absolute; */
+    /* top: 30;
+    left: 30; */
+}
 
 
 /* SCROLL TO SECTION */
