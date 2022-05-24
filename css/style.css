@@ -178,6 +178,9 @@ p, a {
 .plov-wrapper p {
     margin-top: 40px;
 }
+.plov-wrapper img {
+    max-width: 100%;
+}
 
 /* SCROLL TO SECTION */
 /* section {
