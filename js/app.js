@@ -1,13 +1,34 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
-gsap.to(".scroll", {
-    y: 10,
-    opacity: 0,
+// scroll down animation
+gsap.fromTo(".scroll",{opacity: 0,}, {
+    y: 20,
+    opacity: 1,
     duration: 3,
     repeat: -1,
-    EASE <---!
 });
+
+// hero animation 
+gsap.to(".hero-anim", {
+    scrollTrigger: { trigger: ".intro", start: "-110%", end: "80%", markers: true, scrub: 1, },
+    y: -1000,
+    duration: 3,
+    stagger: 0.25,
+    ease: "power1.out"
+});
+
+// intro animation 
+gsap.to(".intro-anim", {
+    scrollTrigger: { trigger: ".intro", start: "top center", markers: true, scrub: 1, },
+    y: -1000,
+    duration: 3,
+    stagger: 0.25,
+    ease: "power1.out"
+});
+
+
+
+
 
 // // TEST AF ANIMATION
 // const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
