@@ -20,13 +20,40 @@ gsap.to(".hero-anim", {
 // intro animation 
 gsap.to(".intro-anim", {
     scrollTrigger: { trigger: ".intro", start: "top center", markers: true, scrub: 1, },
-    y: -1000,
+    y: -500,
+    duration: 3,
+    stagger: 0.25,
+    ease: "power1.out"
+});
+
+// betydning animation 
+gsap.to(".betydning-anim", {
+    scrollTrigger: { trigger: ".betydning", start: "top center", markers: true, scrub: 1, },
+    y: -500,
     duration: 3,
     stagger: 0.25,
     ease: "power1.out"
 });
 
 
+// details animation 
+gsap.to('.zoom-image', {
+    scrollTrigger: { trigger: '.zoom-image', markers: true, start: 'bottom bottom', scrub: 1, pin: true },
+    scale: 4,
+    duration: 1,
+    x: -500,
+  });
+
+
+
+// fundet animation 
+gsap.to(".fundet-anim", {
+    scrollTrigger: { trigger: ".fundet", start: "top center", markers: true, scrub: 1, },
+    y: -500,
+    duration: 3,
+    stagger: 0.25,
+    ease: "power1.out"
+});
 
 
 
