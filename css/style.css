@@ -144,11 +144,18 @@ p, a {
     flex-direction: column;
     position: relative;
 }
-.details-p-1 {
+.details p {
     position: absolute;
-    bottom: 40%;
     right: 8%;
     left: 40%;
+}
+.details-p-1 {
+    position: absolute;
+    top: 10%;
+}
+.details-p-2 {
+    bottom: 10%;
+
 }
 .details h2 {
     font-size: 3rem;

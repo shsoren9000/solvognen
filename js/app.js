@@ -43,6 +43,10 @@ gsap.to('.zoom-image', {
     duration: 1,
     x: -500,
   });
+gsap.to(".details", {
+    pin: true,
+
+});
 
 
 
