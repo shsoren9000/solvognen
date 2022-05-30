@@ -10,25 +10,26 @@ gsap.fromTo(".scroll",{opacity: 0,}, {
 
 // hero animation 
 gsap.to(".hero-anim", {
-    scrollTrigger: { trigger: ".intro", start: "-110%", end: "80%", markers: true, scrub: 1, },
+    scrollTrigger: { trigger: ".intro", start: "-110%", end: "80%", scrub: 1, },
     y: -1000,
     duration: 3,
     stagger: 0.25,
     ease: "power1.out"
 });
 
-// intro animation 
-gsap.to(".intro-anim", {
-    scrollTrigger: { trigger: ".intro", start: "top center", markers: true, scrub: 1, },
-    y: -500,
+// slide up animation 
+gsap.to(".anim-slide-up", {
+    scrollTrigger: { trigger: ".anim-slide-up", start: "top 30%", end: "bottom", markers: true, scrub: 1, },
+    y: -400,
     duration: 3,
     stagger: 0.25,
+    opacity: 0.5,
     ease: "power1.out"
 });
 
 // betydning animation 
 gsap.to(".betydning-anim", {
-    scrollTrigger: { trigger: ".betydning", start: "top center", markers: true, scrub: 1, },
+    scrollTrigger: { trigger: ".betydning", start: "top center", scrub: 1, },
     y: -500,
     duration: 3,
     stagger: 0.25,
@@ -38,21 +39,21 @@ gsap.to(".betydning-anim", {
 
 // details animation 
 gsap.to('.zoom-image', {
-    scrollTrigger: { trigger: '.zoom-image', markers: true, start: 'bottom bottom', scrub: 1, pin: true },
+    scrollTrigger: { trigger: '.zoom-image', start: 'bottom bottom', scrub: 1, pin: true },
     scale: 4,
     duration: 1,
     x: -500,
   });
-gsap.to(".details", {
-    pin: true,
+// gsap.to(".details", {
+//     pin: true,
 
-});
+// });
 
 
 
 // fundet animation 
 gsap.to(".fundet-anim", {
-    scrollTrigger: { trigger: ".fundet", start: "top center", markers: true, scrub: 1, },
+    scrollTrigger: { trigger: ".fundet", start: "top center", scrub: 1, },
     y: -500,
     duration: 3,
     stagger: 0.25,

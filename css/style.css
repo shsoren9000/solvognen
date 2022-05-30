@@ -39,6 +39,12 @@ p, a {
     margin: auto;
 }
 
+
+/* ANIMATIONS */
+.anim-slide-up {
+
+}
+
 /* HERO */
 .hero-wrapper {
     position: relative;
@@ -155,7 +161,6 @@ p, a {
 }
 .details-p-2 {
     bottom: 10%;
-
 }
 .details h2 {
     font-size: 3rem;
