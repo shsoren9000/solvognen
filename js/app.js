@@ -1,4 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
+//test to commit
 
 // scroll down animation
 gsap.fromTo(".scroll",{opacity: 0,}, {
