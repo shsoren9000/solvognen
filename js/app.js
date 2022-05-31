@@ -1,64 +1,72 @@
-gsap.registerPlugin(ScrollTrigger);
-
-// scroll down animation
-gsap.fromTo(".scroll",{opacity: 0,}, {
-    y: 20,
-    opacity: 1,
-    duration: 3,
-    repeat: -1,
-});
-
-// hero animation 
-gsap.to(".hero-anim", {
-    scrollTrigger: { trigger: ".intro", start: "-110%", end: "80%", scrub: 1, },
-    y: -1000,
-    duration: 3,
-    stagger: 0.25,
-    ease: "power1.out"
-});
-
-// slide up animation 
-gsap.to(".anim-slide-up", {
-    scrollTrigger: { trigger: ".anim-slide-up", start: "top 30%", end: "bottom", markers: true, scrub: 1, },
-    y: -400,
-    duration: 3,
-    stagger: 0.25,
-    opacity: 0.5,
-    ease: "power1.out"
-});
-
-// betydning animation 
-gsap.to(".betydning-anim", {
-    scrollTrigger: { trigger: ".betydning", start: "top center", scrub: 1, },
-    y: -500,
-    duration: 3,
-    stagger: 0.25,
-    ease: "power1.out"
+// initialize fullpage 
+new fullpage('#fullPage', {
+	//options here
+	autoScrolling:true,
+	scrollHorizontally: true
 });
 
 
-// details animation 
-gsap.to('.zoom-image', {
-    scrollTrigger: { trigger: '.zoom-image', start: 'bottom bottom', scrub: 1, pin: true },
-    scale: 4,
-    duration: 1,
-    x: -500,
-  });
-// gsap.to(".details", {
-//     pin: true,
+// gsap.registerPlugin(ScrollTrigger);
 
+// // scroll down animation
+// gsap.fromTo(".scroll",{opacity: 0,}, {
+//     y: 20,
+//     opacity: 1,
+//     duration: 3,
+//     repeat: -1,
+// });
+
+// // hero animation 
+// gsap.to(".hero-anim", {
+//     scrollTrigger: { trigger: ".intro", start: "-110%", end: "80%", scrub: 1, },
+//     y: -1000,
+//     duration: 3,
+//     stagger: 0.25,
+//     ease: "power1.out"
+// });
+
+// // slide up animation 
+// gsap.to(".anim-slide-up", {
+//     scrollTrigger: { trigger: ".anim-slide-up", start: "top 30%", end: "bottom", markers: true, scrub: 1, },
+//     y: -400,
+//     duration: 3,
+//     stagger: 0.25,
+//     opacity: 0.5,
+//     ease: "power1.out"
+// });
+
+// // betydning animation 
+// gsap.to(".betydning-anim", {
+//     scrollTrigger: { trigger: ".betydning", start: "top center", scrub: 1, },
+//     y: -500,
+//     duration: 3,
+//     stagger: 0.25,
+//     ease: "power1.out"
 // });
 
 
+// // details animation 
+// gsap.to('.zoom-image', {
+//     scrollTrigger: { trigger: '.zoom-image', start: 'bottom bottom', scrub: 1, pin: true },
+//     scale: 4,
+//     duration: 1,
+//     x: -500,
+//   });
+// // gsap.to(".details", {
+// //     pin: true,
 
-// fundet animation 
-gsap.to(".fundet-anim", {
-    scrollTrigger: { trigger: ".fundet", start: "top center", scrub: 1, },
-    y: -500,
-    duration: 3,
-    stagger: 0.25,
-    ease: "power1.out"
-});
+// // });
+
+
+
+// // fundet animation 
+// gsap.to(".fundet-anim", {
+//     scrollTrigger: { trigger: ".fundet", start: "top center", scrub: 1, },
+//     y: -500,
+//     duration: 3,
+//     stagger: 0.25,
+//     ease: "power1.out"
+// });
 
 
 

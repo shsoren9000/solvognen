@@ -6,44 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solvognen</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- fullpage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.8/fullpage.min.css">
     <!-- adobe font -->
     <link rel="stylesheet" href="https://use.typekit.net/ppq0vjj.css">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/> -->
 
     
 </head>
 <body>
+    <div id="fullPage">
     <!-- HERO -->
-    <section class="hero">
+    <div class="section hero">
         <div class="hero-wrapper">
             <h1 class="hero-anim">Solvognen</h1>
             <img class="hero-anim" src="img/Solvognen-00103_hero.jpg" alt="">
             <h2 class="hero-anim">Danmarkshistoriens største skat</h2>
             <div class="scroll"></div>
         </div>
-    </section>
+    </div>
 
     <!-- INTRO -->
     <section class="intro">
-        <img class="anim-slide-up" src="img/solvognen_sideview.jpg" alt="">
-        <div class="anim-slide-up fact-wrapper">
-            <p>
-                Solvognen måler 
-                cirka 54 cm x 35 cm 
-                x 29 cm.
-                Hesten vejer 2640 
-                gram, skiven 1550 
-                gram.
-            </p>
+        <div class="section">
+            <img class="anim-slide-up" src="img/solvognen_sideview.jpg" alt="">
+            <div class="anim-slide-up fact-wrapper">
+                <p>
+                    Solvognen måler 
+                    cirka 54 cm x 35 cm 
+                    x 29 cm.
+                    Hesten vejer 2640 
+                    gram, skiven 1550 
+                    gram.
+                </p>
+            </div>
         </div>
-        <p class="intro-text anim-slide-up">
-            Solvognen spiller en afgørende rolle i at forstå vores forfædres tilbedelse af solen, og den er et af Europas fineste og bedst bevarede kunstværker fra bronzealderen.
-            <br><br>
-            Stilmæssigt er solvognen forud for sin tid og med tydelige nordiske præg. Men da den efter 3.400 år dukker frem af jorden i 1902, er den lige ved at ende som legetøj.
-        </p>
-        <div class="button-container anim-slide-up">
-            <a href="" class="intro-btn btn">Click me</a>
-            <a href="" class="intro-btn btn anim-slide-up">Click me</a>
+        <div class="section">
+            <p class="intro-text anim-slide-up">
+                Solvognen spiller en afgørende rolle i at forstå vores forfædres tilbedelse af solen, og den er et af Europas fineste og bedst bevarede kunstværker fra bronzealderen.
+                <br><br>
+                Stilmæssigt er solvognen forud for sin tid og med tydelige nordiske præg. Men da den efter 3.400 år dukker frem af jorden i 1902, er den lige ved at ende som legetøj.
+            </p>
+            <div class="button-container anim-slide-up">
+                <a href="" class="intro-btn btn">Click me</a>
+                <a href="" class="intro-btn btn anim-slide-up">Click me</a>
+            </div>
         </div>
     </section>
     <!-- spacer -->
@@ -111,6 +117,7 @@
     </section>
     <!-- spacer -->
     <img class="fundet-anim" src="img/hjulkors.svg" alt="" class="spacer">
+    </div>
 
 
 
@@ -138,8 +145,10 @@
 
 
 <!--script tags-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script> -->
 <script src="js/app.js"></script>
 </body>
 </html>
