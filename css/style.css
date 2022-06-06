@@ -38,12 +38,15 @@ p, a {
     width: 100px;
     margin: auto;
 }
+p {
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 40px;
+}
 
 
 /* ANIMATIONS */
-.anim-slide-up {
 
-}
 
 /* HERO */
 .hero-wrapper {
@@ -108,10 +111,12 @@ p, a {
     margin: 10px 10px;
     cursor: pointer;
     border-radius: 16px;
+
 }
 .btn:hover {
     background-color:white;
     color: black;
+    filter: drop-shadow(-1px 0px 3px #DCC87F);
 }
 /* .hjulkors {
     filter: invert(100%);
@@ -127,16 +132,17 @@ p, a {
     justify-content: center;
     align-items: center;
 }
+/* nu global indstilling
 .betydning p {
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 40px;
-}
+} */
 .betydning h2 {
     font-size: 3rem;
 }
 .betydning img {
-    opacity: 0.5;
+    width: 100%;
     margin: 50px;
 }
 .betydning video {
@@ -145,7 +151,7 @@ p, a {
 }
 
 /* DETALJER SECTION */
-.details {
+/* .details {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -156,17 +162,23 @@ p, a {
     left: 40%;
 }
 .details-p-1 {
-    position: absolute;
-    top: 10%;
+    top: 200px;
 }
 .details-p-2 {
-    bottom: 10%;
+    top: 800px;
 }
+.details-p-3 {
+    top: 1200px;
+}
+.details-p-4 {
+    top: 1600px;
+}
+
 .details h2 {
     font-size: 3rem;
     display: flex;
     justify-content: center;
-}
+} */
 /* zoom image */
 .zoom-container {
     height: 100%;
@@ -180,22 +192,20 @@ p, a {
 }
 
 /* FUNDET SECTION  */
-.fundet p {
-    margin-left: 8%;
-}
 .field-wrapper {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
 }
 .field-wrapper img {
-    max-width: 100%;
-    margin-left: 10px;    
+    max-width: 100%;        
 }
 .plov-wrapper {
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .plov-wrapper p {
     margin-top: 40px;

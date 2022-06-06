@@ -1,14 +1,22 @@
 gsap.registerPlugin(ScrollTrigger);
 
 
+// hero animation 
 gsap.fromTo(".hero-anim", { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25})
-
-gsap.fromTo(".anim-fade-down", 
-{ y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: ".intro .betydning", end: "center", scrub: 1, markers: true}})
-
 
 // scroll down animation
 gsap.fromTo(".scroll",{opacity: 0}, { y: 20, opacity: 1, duration: 1, repeat: -1});
+
+// fade down 
+gsap.fromTo(".anim-fade-down", 
+{ y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: ".intro .betydning", end: "center center", scrub: 1, markers: true}})
+
+
+// rotate spacer 
+gsap.to(".spacer", {rotation: 360, duration: 60, repeat: -1, ease: "none" });
+
+// zoom and pin 
+
 
 // // hero animation img 
 // gsap.to(".hero-anim-img", { scrollTrigger: { trigger: ".intro"}, scale: 4, pin: true, scrub: 1, })
@@ -42,17 +50,16 @@ gsap.fromTo(".scroll",{opacity: 0}, { y: 20, opacity: 1, duration: 1, repeat: -1
 // });
 
 
-// // details animation 
-// gsap.to('.zoom-image', {
-//     scrollTrigger: { trigger: '.zoom-image', start: 'bottom bottom', scrub: 1, pin: true },
-//     scale: 4,
-//     duration: 1,
-//     x: -500,
-//   });
-// // gsap.to(".details", {
-// //     pin: true,
+// details animation 
+gsap.to('.zoom-image', {
+    scrollTrigger: { trigger: '.zoom-image', start: 'center center', end: "bottom 10%", scrub: 1, pin: true },
+    scale: 4,
+    x: -500,
+  });
+// gsap.to(".details", {
+//     pin: true,
 
-// // });
+// });
 
 
 
