@@ -151,7 +151,9 @@ p {
 }
 
 /* DETALJER SECTION */
-/* .details {
+
+
+.details {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -162,7 +164,7 @@ p {
     left: 40%;
 }
 .details-p-1 {
-    top: 200px;
+    top: 400px;
 }
 .details-p-2 {
     top: 800px;
@@ -178,7 +180,8 @@ p {
     font-size: 3rem;
     display: flex;
     justify-content: center;
-} */
+}
+
 /* zoom image */
 .zoom-container {
     height: 100%;
