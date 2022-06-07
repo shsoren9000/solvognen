@@ -19,7 +19,7 @@ gsap.to(".spacer", {rotation: 360, duration: 60, repeat: -1, ease: "none" });
 
 // PIN AND ZOOM TIME LINE
 const tl = gsap.timeline({
-    scrollTrigger: { trigger: ".zoom-image", pin: true, scrub: 1, markers: false, start: "bottom bottom", end:"+=3500", pinSpacing: true }
+    scrollTrigger: { trigger: ".zoom-image", pin: true, scrub: 1, markers: false, start: "bottom bottom", end:"+=3500", pinSpace: false }
 });
 
 tl.to(".zoom-image", {
@@ -34,9 +34,10 @@ tl.to(".zoom-image", {
      y: -500
  })
  tl.to(".zoom-image", {
-    y: 0,
+    y: 500,
     x: 0,
     scale: 1
+    
 })
 
 
