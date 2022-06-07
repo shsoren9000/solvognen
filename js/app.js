@@ -5,7 +5,9 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.fromTo(".hero-anim", { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25})
 
 // scroll down animation
-gsap.fromTo(".scroll",{opacity: 0}, { y: 20, opacity: 1, duration: 1, repeat: -1});
+// gsap.fromTo(".scroll",{opacity: 0}, { y: 20, opacity: 1, duration: 1, repeat: -1, });
+gsap.to(".scroll", {y: 12, ease: "power1.inOut", repeat: -1, yoyo: true});
+
 
 // fade down 
 gsap.fromTo(".anim-fade-down", 
@@ -15,15 +17,47 @@ gsap.fromTo(".anim-fade-down",
 // rotate spacer 
 gsap.to(".spacer", {rotation: 360, duration: 60, repeat: -1, ease: "none" });
 
-// pin and zoom 
-gsap.to("zoom-container", { 
-    scrollTrigger: { trigger: ".zoom-image", pin: true, markers: false, start: "bottom bottom", end:"+=2000" },
+// PIN AND ZOOM TIME LINE
+const tl = gsap.timeline({
+    scrollTrigger: { trigger: ".zoom-image", pin: true, scrub: 1, markers: false, start: "bottom bottom", end:"+=3500", pinSpacing: true }
 });
-gsap.to(".zoom-image", { 
-    scrollTrigger: { trigger: ".details-p-4", scrub: 1, markers: true, start: "bottom bottom", end: "+=200" },
+
+tl.to(".zoom-image", {
+    scale: 1.5,
+    x: -200
+})
+tl.to(".zoom-image", { 
     scale: 4,
     x: -500
  })
+ tl.to(".zoom-image", {
+     y: -500
+ })
+ tl.to(".zoom-image", {
+    y: 0,
+    x: 0,
+    scale: 1
+})
+
+
+// // PIN AND ZOOM 
+// gsap.to("zoom-container", { 
+//     scrollTrigger: { trigger: ".zoom-image", pin: true, markers: false, start: "bottom bottom", end:"+=3000" },
+// });
+// // den runde form
+// gsap.to(".zoom-image", {
+//     scrollTrigger: { trigger: ".details-p-2", scrub: 1, start: "bottom bottom", end: "top 50%", scrub: 1 },
+//     scale: 1.5,
+//     x: -200
+// })
+
+
+// // hjulene
+// gsap.to(".zoom-image", { 
+//     scrollTrigger: { trigger: ".details-p-4", scrub: 1, markers: true, start: "bottom bottom", },
+//     scale: 4,
+//     x: -500
+//  })
 
 
 // zoom image with code pen thing :( 
