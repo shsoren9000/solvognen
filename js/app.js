@@ -10,8 +10,17 @@ gsap.to(".scroll", {y: 12, ease: "power1.inOut", repeat: -1, yoyo: true});
 
 
 // fade down 
-gsap.fromTo(".anim-fade-down", 
-{ y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: ".intro .betydning", end: "center center", scrub: 1}});
+const animFadeDown = 
+gsap.utils.toArray(".anim");
+animFadeDown.forEach(anim => {
+    gsap.fromTo(anim, 
+{ y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: anim, start: "top bottom", end: "center center", scrub: 1, markers: false}})
+})
+
+
+
+// gsap.fromTo(".anim", 
+// { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: ".intro .betydning .details", end: "center center", scrub: 1, markers: true}});
 
 
 // rotate spacer 
@@ -19,7 +28,7 @@ gsap.to(".spacer", {rotation: 360, duration: 60, repeat: -1, ease: "none" });
 
 // PIN AND ZOOM TIME LINE
 const tl = gsap.timeline({
-    scrollTrigger: { trigger: ".zoom-image", pin: true, scrub: 1, markers: false, start: "bottom bottom", end:"+=3500", pinSpace: false }
+    scrollTrigger: { trigger: ".zoom-image", pin: true, scrub: 1, markers: false, start: "bottom bottom", end:"+=3300", pinSpace: false }
 });
 
 tl.to(".zoom-image", {
@@ -37,9 +46,20 @@ tl.to(".zoom-image", {
     y: 500,
     x: 0,
     scale: 1
-    
 })
 
+// alternativ fundet animation 
+animFadeDown.forEach(fundetAnim => {
+    gsap.fromTo(fundetAnim, 
+{ y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: fundetAnim, start: "top bottom", end: "center center", scrub: 1, markers: false}})
+})
+
+
+
+
+
+// gsap.fromTo(".fundet-anim", 
+// { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: ".fundet", end: "center center", scrub: 1, markers: true}});
 
 // // PIN AND ZOOM 
 // gsap.to("zoom-container", { 
