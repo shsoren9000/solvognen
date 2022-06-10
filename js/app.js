@@ -33,19 +33,17 @@ const tl = gsap.timeline({
 
 tl.to(".zoom-image", {
     scale: 1.5,
-    x: -200
+    xPercent: -10
 })
 tl.to(".zoom-image", { 
     scale: 4,
-    x: -500
+    xPercent: -120
  })
  tl.to(".zoom-image", {
-     y: -500
+     yPercent: -120
  })
  tl.to(".zoom-image", {
-    y: 500,
-    x: 0,
-    scale: 1
+    scale: 3
 })
 
 // alternativ fundet animation 

@@ -43,37 +43,40 @@ p {
     margin-left: 8%;
     margin-right: 8%;
     margin-bottom: 40px;
-    font-size: clamp(1rem, 2.5vw, 2rem); 
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 /* ALL media querys  */
 /* desktop */
-@media screen and(min-width: 1024px) {
-section {
-    margin-left: 10%;
-    margin-right: 10%;
-}  
+@media screen and (min-width: 1024px) {
+    p {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+    
 } /* desktop mq endtag*/
 
 
 
 /* HERO */
-.hero-wrapper {
-    position: relative;
-}
 .hero {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url("/img/Solvognen-00103_hero.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.hero-spacer {
+    height: 30vh;
 }
 .hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; 
 }
-.hero img {
-    max-width: 100%;
-}
+
 /* scroll icon */
 .scroll {
     position: absolute;
@@ -87,12 +90,10 @@ section {
     transform: rotate(-45deg); */
 }
 
-/* HERO media querys  */
+/* hero media querys  */
 /* desktop */
 @media screen and (min-width: 1024px) {
-.hero img {
-    display: none;
-}
+
 } /* desktop mq endtag*/
 
 
@@ -114,9 +115,6 @@ section {
     padding: 25px 0;
 }
 .intro-text {
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-bottom: 40px;
     text-align: center;
     
 }
@@ -143,6 +141,24 @@ section {
     margin: 50px;
 } */
 
+/* INTRO media query */
+/* desktop */
+@media screen and (min-width: 1024px) {
+    .intro img {
+        max-width: 30%;
+        margin-top: 150px;
+    }
+    .fact-wrapper {
+        max-width: 20%;
+    }
+    .fact-wrapper p {
+        margin: 0 8% 0 8%;
+    }
+
+} /* desktop mq endtag*/
+
+
+
 /* BETYDNING SECTION */
 .betydning {
     display: flex;
@@ -165,9 +181,58 @@ section {
     margin-bottom: 40px;
 }
 
-/* DETALJER SECTION */
+/* BETYDNING media query */
+/* desktop */
+@media screen and (min-width: 1024px) {
+    /* grid -.-
+    .betydning {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "headline headline" 
+            "paragraph-1 paragraph-2"
+            "img paragraph-3"
+            "video video"
+    }
+    .betydning-p-1 {
+        grid-area: paragraph-1;
+    }
+    .betydning-img-1 {
+        grid-area: img;
+    }
+    .betydning-p-2 {
+        grid-area: paragraph-2
+    }
+    .betydning-p-3 {
+        grid-area: paragraph-3
+    }
+    .betydning-h {
+        grid-area: headline;
+    }
+    .betydning-video-1 {
+        grid-area: video
+    } */
+
+    .betydning img {
+        width: 35%;
+        margin: 50px;
+    }
+    .betydning img:hover {
+        transition: scale(1.5);
+        duration: 2
+    }
+    .betydning video {
+        width: 80%;
+        margin-bottom: 40px;
+    }
 
 
+} /* desktop mq endtag*/
+
+
+
+/* DETAILS SECTION */
 .details {
     display: flex;
     flex-direction: column;
@@ -178,6 +243,8 @@ section {
     right: 8%;
     left: 30vw;
     width: 50vw;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 .details-p-1 {
     top: 10%;
@@ -210,27 +277,60 @@ section {
 }
 
 /* FUNDET SECTION  */
+.fundet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fundet img {
+    width: 100%;
+}
 .field-wrapper {
-    /* display: flex;
-    align-items: center; */
     margin-bottom: 100px;
     display: flex;
     flex-direction: column;
-}
-.field-wrapper img {
-    max-width: 100%;        
+    align-items: center;
 }
 .plov-wrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 .plov-wrapper p {
     margin-top: 40px;
 }
-.plov-wrapper img {
-    max-width: 100%;
+/* FUNDET media query */
+/* desktop */
+@media screen and (min-width: 1024px) {
+    .fundet p {
+        margin: 0;
+    }
+    .field-wrapper, .plov-wrapper {
+        display: flex;
+        margin: 150px 15% 300px 15%;
+    }
+
+    .field-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+    .field-wrapper img {
+        width: 40%;
+    }
+
+    .plov-wrapper img {
+        width: 75%;
+    }
+    .plov-wrapper {
+        flex-direction: column-reverse;
+
+    }
+    .plov-wrapper p {
+        margin-right: 40%;
+    }
 }
+
+
 
 /* SCROLL TO SECTION */
 /* section {
