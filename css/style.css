@@ -1,5 +1,5 @@
 * {
-    margin-bottom: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -35,7 +35,7 @@ p, a {
     display: flex;
     filter: invert(100%);
     opacity: 0.5;
-    height: 200px;
+    height: 300px;
     width: 100px;
     margin: auto;
 }
@@ -45,6 +45,12 @@ p {
     margin-bottom: 40px;
     font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
+figcaption {
+
+}
+
+
+
 
 /* ALL media querys  */
 /* desktop */
@@ -56,6 +62,22 @@ p {
     
 } /* desktop mq endtag*/
 
+/* SCROLLBAR  */
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 8px;
+    background: black;
+}
+.progress-bar {
+    height: 5px;
+    background: white;
+    filter: drop-shadow(-1px 0px 8px #DCC87F);
+    width: 0%;
+}
+  
 
 
 /* HERO */
@@ -247,16 +269,16 @@ p {
     margin-right: 8%;
 }
 .details-p-1 {
-    top: 10%;
-}
-.details-p-2 {
     top: 100vh;
 }
-.details-p-3 {
+.details-p-2 {
     top: 200vh;
 }
-.details-p-4 {
+.details-p-3 {
     top: 300vh;
+}
+.details-p-4 {
+    top: 500vh;
 }
 
 .details h2 {
@@ -276,28 +298,55 @@ p {
     object-fit: cover;
 }
 
+/* DETAILS media query */
+/* desktop */
+@media screen and (min-width: 1024px) {
+    /* .details-p-1 {
+        top: 50vh;
+    }
+    .details-p-2 {
+        top: 150vh;
+    }
+    .details-p-3 {
+        top: 250vh;
+    }
+    .details-p-4 {
+        top: 350vh;
+    } */
+    /* zoom image */
+    .zoom-container {
+        height: 80%;
+        width: 80%;
+    }  
+    .zoom-container img {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+
 /* FUNDET SECTION  */
 .fundet {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 .fundet img {
     width: 100%;
 }
-.field-wrapper {
-    margin-bottom: 100px;
+.field-wrapper, .plov-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.plov-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.field-wrapper {
+    margin-bottom: 100px;
 }
 .plov-wrapper p {
     margin-top: 40px;
+}
+.desktop-caption {
+    display: none;
 }
 /* FUNDET media query */
 /* desktop */
@@ -306,13 +355,11 @@ p {
         margin: 0;
     }
     .field-wrapper, .plov-wrapper {
-        display: flex;
         margin: 150px 15% 300px 15%;
     }
 
     .field-wrapper {
         flex-direction: row;
-        align-items: center;
     }
     .field-wrapper img {
         width: 40%;
@@ -320,15 +367,17 @@ p {
 
     .plov-wrapper img {
         width: 75%;
+        margin-left: -5%;
     }
     .plov-wrapper {
         flex-direction: column-reverse;
-
+        align-items: flex-start;
     }
     .plov-wrapper p {
         margin-right: 40%;
+        margin-top: 100px;
     }
-}
+    }
 
 
 

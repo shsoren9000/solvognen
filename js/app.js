@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-
 // hero animation 
 gsap.fromTo(".hero-anim", { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25})
 
@@ -28,7 +27,7 @@ gsap.to(".spacer", {rotation: 360, duration: 60, repeat: -1, ease: "none" });
 
 // PIN AND ZOOM TIME LINE
 const tl = gsap.timeline({
-    scrollTrigger: { trigger: ".zoom-image", pin: true, scrub: 1, markers: false, start: "bottom bottom", end:"+=3300", pinSpace: false }
+    scrollTrigger: { trigger: ".zoom-image", endTrigger: ".details-p-4", end: "top 40%", pin: true, scrub: 1, markers: false, start: "bottom bottom", pinSpace: false }
 });
 
 tl.to(".zoom-image", {
@@ -42,9 +41,9 @@ tl.to(".zoom-image", {
  tl.to(".zoom-image", {
      yPercent: -120
  })
- tl.to(".zoom-image", {
-    scale: 3
-})
+//  tl.to(".zoom-image", {
+//     scale: 4
+// })
 
 // alternativ fundet animation 
 animFadeDown.forEach(fundetAnim => {
@@ -52,6 +51,17 @@ animFadeDown.forEach(fundetAnim => {
 { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: fundetAnim, start: "top bottom", end: "center center", scrub: 1, markers: false}})
 })
 
+
+// SCROLLBAR (src: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_indicator)
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
 
 
 
