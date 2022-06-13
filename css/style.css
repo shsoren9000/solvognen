@@ -92,7 +92,7 @@ figcaption {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/img/Solvognen-00103_hero_web.jpg");
+    background-image: url("../img/Solvognen-00103_hero_web.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
