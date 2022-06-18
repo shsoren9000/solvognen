@@ -55,10 +55,10 @@ const tl = gsap.timeline({
     scrollTrigger: { 
         trigger: ".zoom-image", 
         endTrigger: ".details-p-4", 
-        end: "top 40%", 
+        end: "top 10%", 
         pin: true, 
         scrub: 1, 
-        markers: false, 
+        markers: true, 
         start: "bottom bottom", 
         pinSpace: false }
 });
@@ -71,7 +71,7 @@ tl.to(".zoom-image", {
     xPercent: -120
  })
  tl.to(".zoom-image", {
-     yPercent: -120
+     yPercent: -150
  })
 //  tl.to(".zoom-image", {
 //     scale: 4
