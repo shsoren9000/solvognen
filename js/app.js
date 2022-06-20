@@ -1,32 +1,35 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // hero animation 
-gsap.fromTo(".hero-anim", 
-    { y: -100, 
-    opacity: 0 },
-        { y: 0, 
+gsap.fromTo(".hero-anim", {
+    y: -100, 
+    opacity: 0 
+    },
+    {
+        y: 0, 
         opacity: 1, 
         duration: 1, 
-        stagger: 0.25 }
-);
+        stagger: 0.25 
+});
 
 // scroll down animation
-gsap.to(".scroll", 
-    { y: 12, 
+gsap.to(".scroll", {
+    y: 12, 
     ease: "power1.inOut", 
     repeat: -1, 
-    yoyo: true }
-);
-
+    yoyo: true 
+});
 
 // fade down 
 const animFadeDown = 
 gsap.utils.toArray(".anim");
 animFadeDown.forEach(anim => {
-    gsap.fromTo(anim, 
-        { y: -100,
-        opacity: 0 }, 
-            { y: 0,
+    gsap.fromTo(anim, {
+        y: -100,
+        opacity: 0 
+        }, 
+        { 
+            y: 0,
             opacity: 1,
             duration: 1,
             stagger: 0.25,
@@ -43,12 +46,12 @@ animFadeDown.forEach(anim => {
 // { y: -100, opacity: 0}, {y: 0, opacity: 1, duration: 1, stagger: 0.25, scrollTrigger: { trigger: ".intro .betydning .details", end: "center center", scrub: 1, markers: true}});
 
 // rotate spacer 
-gsap.to(".spacer", 
-    { rotation: 360, 
+gsap.to(".spacer", {
+    rotation: 360, 
     duration: 60, 
     repeat: -1, 
-    ease: "none" }
-);
+    ease: "none" 
+});
 
 // PIN AND ZOOM TIME LINE
 const tl = gsap.timeline({
@@ -58,7 +61,7 @@ const tl = gsap.timeline({
         end: "top 10%", 
         pin: true, 
         scrub: 1, 
-        markers: true, 
+        markers: false, 
         start: "bottom bottom", 
         pinSpace: false }
 });
@@ -79,10 +82,12 @@ tl.to(".zoom-image", {
 
 // alternativ fundet animation 
 animFadeDown.forEach(fundetAnim => {
-    gsap.fromTo(fundetAnim, 
-        { y: -100, 
-        opacity: 0 },
-            { y: 0, 
+    gsap.fromTo(fundetAnim, {
+        y: -100, 
+        opacity: 0 
+        }, 
+        { 
+            y: 0, 
             opacity: 1, 
             duration: 1, 
             stagger: 0.25, 
