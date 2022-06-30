@@ -20,6 +20,33 @@ gsap.to(".scroll", {
     yoyo: true 
 });
 
+// PIN AND ZOOM TIME LINE
+const tl = gsap.timeline({
+    scrollTrigger: { 
+        trigger: ".zoom-image", 
+        endTrigger: ".details-p-4", 
+        end: "top 10%", 
+        pin: true, 
+        scrub: 1, 
+        markers: false, 
+        start: "bottom bottom", 
+        pinSpace: false }
+});
+tl.to(".zoom-image", {
+    scale: 1.5,
+    xPercent: -10
+});
+tl.to(".zoom-image", { 
+    scale: 4,
+    xPercent: -120
+ });
+ tl.to(".zoom-image", {
+     yPercent: -150
+ });
+//  tl.to(".zoom-image", {
+//     scale: 4
+// })
+
 // fade down 
 const animFadeDown = 
 gsap.utils.toArray(".anim");
@@ -53,52 +80,46 @@ gsap.to(".spacer", {
     ease: "none" 
 });
 
-// PIN AND ZOOM TIME LINE
-const tl = gsap.timeline({
-    scrollTrigger: { 
-        trigger: ".zoom-image", 
-        endTrigger: ".details-p-4", 
-        end: "top 10%", 
-        pin: true, 
-        scrub: 1, 
-        markers: false, 
-        start: "bottom bottom", 
-        pinSpace: false }
-});
-tl.to(".zoom-image", {
-    scale: 1.5,
-    xPercent: -10
-})
-tl.to(".zoom-image", { 
-    scale: 4,
-    xPercent: -120
- })
- tl.to(".zoom-image", {
-     yPercent: -150
- })
-//  tl.to(".zoom-image", {
-//     scale: 4
-// })
+
 
 // alternativ fundet animation 
-animFadeDown.forEach(fundetAnim => {
-    gsap.fromTo(fundetAnim, {
-        y: -100, 
-        opacity: 0 
-        }, 
-        { 
-            y: 0, 
-            opacity: 1, 
-            duration: 1, 
-            stagger: 0.25, 
-            scrollTrigger: { 
-                trigger: fundetAnim, 
-                start: "top bottom", 
-                end: "center center", 
-                scrub: 1, 
-                markers: false}}
-    )
-});
+// animFadeDown.forEach(fundetAnim => {
+//     gsap.fromTo(fundetAnim, {
+//         y: -100, 
+//         opacity: 0 
+//         }, 
+//         { 
+//             y: 0, 
+//             opacity: 1, 
+//             duration: 1, 
+//             stagger: 0.25, 
+//             scrollTrigger: { 
+//                 trigger: fundetAnim, 
+//                 start: "top bottom", 
+//                 end: "center center", 
+//                 scrub: 1, 
+//                 markers: false}}
+//     )
+// });
+
+// animFadeDown.forEach(anim => {
+//     gsap.fromTo(anim, {
+//         y: -100,
+//         opacity: 0 
+//         }, 
+//         { 
+//             y: 0,
+//             opacity: 1,
+//             duration: 1,
+//             stagger: 0.25,
+//             scrollTrigger: {
+//                 trigger: anim,
+//                 start: "top bottom",
+//                 end: "center center",
+//                 scrub: 1,
+//                 markers: false}}
+//     )
+// });
 
 
 // PROGRESSBAR (src: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_indicator)
